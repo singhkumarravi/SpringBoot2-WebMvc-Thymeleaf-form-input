@@ -1,0 +1,22 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<body>
+<h3>Show Page</h3>
+<div th:text="${data}"></div>
+<table border="1">
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>Gender</th>
+<th>DEPT</th>
+<th>LANGUAGE</th>
+</tr>
+<tr th:each="ob:${data}">
+<td th:text="${ob.empId}"></td>
+<td th:text="${ob.empName}"></td>
+<td th:text="${ob.empGen}"></td>
+<td th:text="${ob.empDept}"></td>
+<td th:text="${ob.empLangs}"></td>
+</tr>
+</table>
+</body>
+</html>
